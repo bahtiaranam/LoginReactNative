@@ -1,18 +1,19 @@
 import React, {Component} from 'react';
-import {StyleSheet, View, Text } from 'react-native';
+import {StyleSheet, View, Text, Image, KeyboardAvoidingView } from 'react-native';
 import LoginForm from './LoginForm';
 
 export default class Login extends Component {
 	render() {
 		return (
-			<View style={styles.container}>
+			<KeyboardAvoidingView behavior="padding" style={styles.container}>
 				<View style={styles.logoContainer}>
-					<Text style={styles.title}>AYO LOGIN FACEBOOK</Text>
+					<Image style={styles.logo} source={require('../fb.png')}/>					
+					<Text style={styles.title}>An app made for github using React Native</Text>
 				</View>
 				<View style ={styles.formContainer}>
 					<LoginForm />  
 			 	</View>
-			</View>
+			</KeyboardAvoidingView>
 		);
 	}
 
@@ -29,6 +30,13 @@ const styles = StyleSheet.create({
 		justifyContent:'center',
 	},
 	title:{
-		color:'#fff'
+		color:'#fff',
+		marginTop: 10,
+		width:150,
+		textAlign: 'center'
+	},
+	logo:{
+		width: 100,
+		height:100
 	}
 });
