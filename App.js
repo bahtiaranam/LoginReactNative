@@ -1,15 +1,6 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
-import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+ React, {Component} from 'react';
+import {Platform, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import Login from './components/Login';
-
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
   android:
@@ -21,7 +12,9 @@ type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
-      <Login/>
+      <View>
+        <Login/>
+      </View>
     );
   }
 }
@@ -43,4 +36,5 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
+
 });

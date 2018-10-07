@@ -7,7 +7,7 @@ export default class Login extends Component {
 		return (
 			<KeyboardAvoidingView behavior="padding" style={styles.container}>
 				<View style={styles.logoContainer}>
-					<Image style={styles.logo} source={require('../fb.png')}/>					
+					<Image style={styles.logo} source={require('../github.png')}/>					
 					<Text style={styles.title}>An app made for github using React Native</Text>
 				</View>
 				<View style ={styles.formContainer}>
@@ -22,21 +22,21 @@ export default class Login extends Component {
 const styles = StyleSheet.create({
 	container: {
 		flex : 1,
-		backgroundColor: '#3498db'
+		backgroundColor: '#2c3e50'
 	},
 	logoContainer:{
 		alignItems :'center',
-		flexGrow : 1,
-		justifyContent:'center',
+		flexGrow : 100,
+		justifyContent:'center'
 	},
 	title:{
 		color:'#fff',
-		marginTop: 10,
-		width:150,
+		marginTop: 12,
+		width:170,
 		textAlign: 'center'
 	},
 	logo:{
-		width: 100,
-		height:100
+		width: 130,
+		height:130
 	}
 });
